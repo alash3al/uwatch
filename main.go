@@ -65,6 +65,7 @@ func main() {
 func screenshot(url string, filename, dimensions string) (string, error) {
 	err := exec.Command(
 		*flagChrome,
+		"--no-sandbox",
 		"--window-size="+dimensions,
 		"--headless",
 		"--disable-gpu",
